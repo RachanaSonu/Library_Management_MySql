@@ -50,12 +50,12 @@ def delete_book():
 
 def edit_book():
     book_id = int(input("Enter book ID to edit: "))
-    title = input("Enter new title: ")
-    author = input("Enter new author name: ")
-    year_published = int(input("Enter new year of publication: "))
-    person = input("Enter new book taken person's name: ")
-    taken_date = input("Enter new taken date (YYYY-MM-DD): ")
-    due_date = input("Enter new due date (YYYY-MM-DD): ")
+    title = input("Update book title: ")
+    author = input("Update author name: ")
+    year_published = int(input("Update year of publication: "))
+    person = input("Update book taken person's name: ")
+    taken_date = input("Update book taken date (YYYY-MM-DD): ")
+    due_date = input("Update book due date (YYYY-MM-DD): ")
 
     update_query = "UPDATE books SET title = %s, author = %s, year_published = %s, person = %s, taken_date = %s, due_date = %s WHERE id = %s"
     cursor.execute(update_query, (title, author, year_published, person, taken_date, due_date, book_id))
